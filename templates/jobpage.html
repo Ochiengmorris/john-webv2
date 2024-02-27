@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   {% include ('bootstrap.html') %}
-  <title>{{job['title']}} - Jovian Careers</title>
+  <title>{{job['title']}} - Johnmorris Careers</title>
 </head>
 <body>
 
   {% include 'nav.html' %}
 
   <div class="container">
-    <h1 class="text-center mt-2 mb-4">Jovian careers</h1>
+    <h1 class="text-center mt-2 mb-4">Johnmorris careers</h1>
+    
     <h3 class="mb-2">Title</h3>
     <p>{{job['title']}}</p> 
     <h3>Location</h3>
@@ -30,9 +31,11 @@
       <li>{{line}}</li>
       {% endfor %}
     </ol>  
-    <h3>Apply</h3>
+    {% include ('applicationform.html') %}
+
   </div>
 
+  
   {% include 'footer.html' %}
 
 </body>

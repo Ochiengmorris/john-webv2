@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include ('bootstrap.html') %}
+  <title>Johnmorris Careers</title>
+</head>
+<body>
+  {% include ('nav.html') %}
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Johnmorris careers</h1>
+    <h3 class="mb-2">Application Submitted</h3>
+    
+    <b>Full Names</b>
+    <div class="mb-2">{{application['fullName']}}</div>
+  
+    <b>Email</b>
+    <div class="mb-2">{{application['email']}}</div>
+
+    <b>Linkedin URL</b>
+    <div class="mb-2">{{application['linkedin_url']}}</div>
+
+    <b>Education</b>
+    <div class="mb-2">{{application['education']}}</div>
+
+    <b>Work Experience</b>
+    <div class="mb-2">{{application['work_experience']}}</div>
+
+    <b>Resume URL</b>
+    <div class="mb-2">{{application['resume_url']}}</div>
+  </div>
+
+  {% include ('footer.html') %}
+  
+</body>
+</html>
