@@ -1,7 +1,10 @@
 import sqlalchemy
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime, text
+import os
 
-engine = create_engine("mysql+pymysql://uuw9tx5zc8ourru5:1No9xyimyKUi5X89BPpG@byvfcqdtynk11snvfbgr-mysql.services.clever-cloud.com/byvfcqdtynk11snvfbgr?charset=utf8mb4")
+db_conection_string = os.environ['DB_CONNECTION_STRING']
+
+engine = create_engine(db_conection_string)
 
 def load_jobs_from_db():
   with engine.connect() as conn:
